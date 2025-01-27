@@ -1,0 +1,115 @@
+.canvas {
+    display: inline-block;
+    position: relative;
+    z-index: 1002;
+}
+
+.row {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.pixel {
+    width: 5px;
+    height: 5px;
+
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.pixel:hover {
+    border: 1px solid #000;
+}
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-content {
+    padding: 20px;
+}
+
+.offcanvas.open {
+    transform: translateX(0);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.offcanvas-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #000;
+}
+
+.color-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.color-picker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+.confirm-btn {
+position: absolute;
+bottom: 20px;
+right: 20px;
+padding: 10px 20px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.confirm-btn:hover {
+background-color: #0056b3;
+}
+  
